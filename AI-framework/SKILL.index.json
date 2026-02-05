@@ -1,0 +1,847 @@
+{
+  "version": "3.0.0",
+  "mode": "auto-extract",
+  "updated": "2026-02-04T17:37:37.861Z",
+  "stats": {
+    "totalFiles": 5,
+    "totalModules": 3,
+    "totalSections": 50,
+    "totalTags": 27
+  },
+  "modules": {
+    "test-framework": {
+      "file": "SKILL.md",
+      "title": "Test Framework 测试框架",
+      "tags": [
+        "测试框架",
+        "项目概述",
+        "TypeScript",
+        "Express",
+        "MongoDB",
+        "用户认证",
+        "用户管理",
+        "分层架构",
+        "Node.js"
+      ],
+      "sections": {
+        "项目概述": {
+          "level": 2,
+          "title": "项目概述",
+          "start": 17,
+          "end": 24,
+          "tags": [
+            "项目概述"
+          ]
+        },
+        "技术栈": {
+          "level": 2,
+          "title": "技术栈",
+          "start": 25,
+          "end": 32,
+          "tags": [
+            "技术栈"
+          ]
+        },
+        "项目架构": {
+          "level": 2,
+          "title": "项目架构",
+          "start": 33,
+          "end": 47,
+          "tags": [
+            "项目架构"
+          ]
+        },
+        "架构设计理念": {
+          "level": 3,
+          "title": "架构设计理念",
+          "start": 48,
+          "end": 53,
+          "tags": [
+            "架构设计理念"
+          ]
+        },
+        "开发规范概要": {
+          "level": 2,
+          "title": "开发规范概要",
+          "start": 54,
+          "end": 55,
+          "tags": [
+            "开发规范概要"
+          ]
+        },
+        "代码规范": {
+          "level": 3,
+          "title": "代码规范",
+          "start": 56,
+          "end": 65,
+          "tags": [
+            "代码规范"
+          ]
+        },
+        "架构规范": {
+          "level": 3,
+          "title": "架构规范",
+          "start": 66,
+          "end": 72,
+          "tags": [
+            "架构规范"
+          ]
+        },
+        "api:git": {
+          "level": 3,
+          "title": "Git 规范",
+          "start": 73,
+          "end": 78,
+          "tags": [
+            "规范",
+            "git"
+          ]
+        },
+        "测试规范": {
+          "level": 3,
+          "title": "测试规范",
+          "start": 79,
+          "end": 83,
+          "tags": [
+            "测试规范"
+          ]
+        },
+        "文档规范": {
+          "level": 3,
+          "title": "文档规范",
+          "start": 84,
+          "end": 89,
+          "tags": [
+            "文档规范"
+          ]
+        },
+        "目录结构": {
+          "level": 2,
+          "title": "目录结构",
+          "start": 90,
+          "end": 91,
+          "tags": [
+            "目录结构"
+          ]
+        },
+        "api:src": {
+          "level": 3,
+          "title": "src/",
+          "start": 92,
+          "end": 97,
+          "tags": [
+            "src"
+          ]
+        },
+        "api:docs": {
+          "level": 3,
+          "title": "docs/",
+          "start": 98,
+          "end": 103,
+          "tags": [
+            "docs"
+          ]
+        },
+        "api:tests": {
+          "level": 3,
+          "title": "tests/",
+          "start": 104,
+          "end": 107,
+          "tags": [
+            "tests"
+          ]
+        },
+        "api:config": {
+          "level": 3,
+          "title": "config/",
+          "start": 108,
+          "end": 111,
+          "tags": [
+            "config"
+          ]
+        },
+        "快速开始": {
+          "level": 2,
+          "title": "快速开始",
+          "start": 112,
+          "end": 127,
+          "tags": [
+            "快速开始"
+          ]
+        },
+        "重要文档索引": {
+          "level": 2,
+          "title": "重要文档索引",
+          "start": 128,
+          "end": 134,
+          "tags": [
+            "重要文档索引"
+          ]
+        },
+        "贡献指南": {
+          "level": 2,
+          "title": "贡献指南",
+          "start": 135,
+          "end": 142,
+          "tags": [
+            "贡献指南"
+          ]
+        }
+      }
+    },
+    "auth": {
+      "file": "src/modules/auth/SKILL.md",
+      "title": "认证模块",
+      "tags": [
+        "登录",
+        "认证",
+        "Token",
+        "JWT",
+        "用户验证",
+        "密码",
+        "注册",
+        "登出",
+        "身份验证",
+        "Session"
+      ],
+      "sections": {
+        "文档导航总270行": {
+          "level": 2,
+          "title": "文档导航 (总 270 行)",
+          "start": 22,
+          "end": 37,
+          "tags": [
+            "文档导航",
+            "总",
+            "行"
+          ]
+        },
+        "模块概述": {
+          "level": 2,
+          "title": "模块概述",
+          "start": 38,
+          "end": 43,
+          "tags": [
+            "模块概述"
+          ]
+        },
+        "模块架构": {
+          "level": 2,
+          "title": "模块架构",
+          "start": 44,
+          "end": 62,
+          "tags": [
+            "模块架构"
+          ]
+        },
+        "设计模式": {
+          "level": 3,
+          "title": "设计模式",
+          "start": 63,
+          "end": 67,
+          "tags": [
+            "设计模式"
+          ]
+        },
+        "关键概念": {
+          "level": 3,
+          "title": "关键概念",
+          "start": 68,
+          "end": 73,
+          "tags": [
+            "关键概念"
+          ]
+        },
+        "api": {
+          "level": 2,
+          "title": "API 文档",
+          "start": 74,
+          "end": 75,
+          "tags": [
+            "文档",
+            "api"
+          ]
+        },
+        "api:authservice": {
+          "level": 3,
+          "title": "AuthService",
+          "start": 76,
+          "end": 78,
+          "tags": [
+            "authservice"
+          ]
+        },
+        "sub:login": {
+          "level": 4,
+          "title": "login(dto: LoginDto): Promise<TokenPair>",
+          "start": 79,
+          "end": 120,
+          "tags": [
+            "login",
+            "dto",
+            "logindto",
+            "promise",
+            "tokenpair"
+          ]
+        },
+        "sub:register": {
+          "level": 4,
+          "title": "register(dto: RegisterDto): Promise<User>",
+          "start": 121,
+          "end": 162,
+          "tags": [
+            "register",
+            "dto",
+            "registerdto",
+            "promise",
+            "user"
+          ]
+        },
+        "sub:refreshtoken": {
+          "level": 4,
+          "title": "refreshToken(token: string): Promise<TokenPair>",
+          "start": 163,
+          "end": 189,
+          "tags": [
+            "refreshtoken",
+            "token",
+            "string",
+            "promise",
+            "tokenpair"
+          ]
+        },
+        "sub:logout": {
+          "level": 4,
+          "title": "logout(userId: string): Promise<void>",
+          "start": 190,
+          "end": 210,
+          "tags": [
+            "logout",
+            "userid",
+            "string",
+            "promise",
+            "void"
+          ]
+        },
+        "模块开发规范": {
+          "level": 2,
+          "title": "模块开发规范",
+          "start": 211,
+          "end": 212,
+          "tags": [
+            "模块开发规范"
+          ]
+        },
+        "错误处理": {
+          "level": 3,
+          "title": "错误处理",
+          "start": 213,
+          "end": 228,
+          "tags": [
+            "错误处理"
+          ]
+        },
+        "日志记录": {
+          "level": 3,
+          "title": "日志记录",
+          "start": 229,
+          "end": 239,
+          "tags": [
+            "日志记录"
+          ]
+        },
+        "数据验证": {
+          "level": 3,
+          "title": "数据验证",
+          "start": 240,
+          "end": 253,
+          "tags": [
+            "数据验证"
+          ]
+        },
+        "测试要求": {
+          "level": 2,
+          "title": "测试要求",
+          "start": 254,
+          "end": 263,
+          "tags": [
+            "测试要求"
+          ]
+        },
+        "依赖关系": {
+          "level": 2,
+          "title": "依赖关系",
+          "start": 264,
+          "end": 265,
+          "tags": [
+            "依赖关系"
+          ]
+        },
+        "外部依赖": {
+          "level": 3,
+          "title": "外部依赖",
+          "start": 266,
+          "end": 271,
+          "tags": [
+            "外部依赖"
+          ]
+        },
+        "内部依赖": {
+          "level": 3,
+          "title": "内部依赖",
+          "start": 272,
+          "end": 278,
+          "tags": [
+            "内部依赖"
+          ]
+        },
+        "相关文档": {
+          "level": 2,
+          "title": "相关文档",
+          "start": 279,
+          "end": 283,
+          "tags": [
+            "相关文档"
+          ]
+        },
+        "常见问题": {
+          "level": 2,
+          "title": "常见问题",
+          "start": 284,
+          "end": 294,
+          "tags": [
+            "常见问题"
+          ]
+        }
+      }
+    },
+    "user": {
+      "file": "src/modules/user/SKILL.md",
+      "title": "用户模块",
+      "tags": [
+        "用户",
+        "信息",
+        "查询",
+        "更新",
+        "删除",
+        "邮箱",
+        "用户管理",
+        "个人资料"
+      ],
+      "sections": {
+        "模块概述": {
+          "level": 2,
+          "title": "模块概述",
+          "start": 24,
+          "end": 29,
+          "tags": [
+            "模块概述"
+          ]
+        },
+        "模块架构": {
+          "level": 2,
+          "title": "模块架构",
+          "start": 30,
+          "end": 49,
+          "tags": [
+            "模块架构"
+          ]
+        },
+        "api": {
+          "level": 2,
+          "title": "API 文档",
+          "start": 50,
+          "end": 51,
+          "tags": [
+            "文档",
+            "api"
+          ]
+        },
+        "api:userservice": {
+          "level": 3,
+          "title": "UserService",
+          "start": 52,
+          "end": 54,
+          "tags": [
+            "userservice"
+          ]
+        },
+        "sub:getbyid": {
+          "level": 4,
+          "title": "getById(id: string): Promise<User>",
+          "start": 55,
+          "end": 80,
+          "tags": [
+            "getbyid",
+            "id",
+            "string",
+            "promise",
+            "user"
+          ]
+        },
+        "sub:getbyemail": {
+          "level": 4,
+          "title": "getByEmail(email: string): Promise<User | null>",
+          "start": 81,
+          "end": 107,
+          "tags": [
+            "getbyemail",
+            "email",
+            "string",
+            "promise",
+            "user",
+            "null"
+          ]
+        },
+        "sub:update": {
+          "level": 4,
+          "title": "update(id: string, dto: UpdateUserDto): Promise<User>",
+          "start": 108,
+          "end": 139,
+          "tags": [
+            "update",
+            "id",
+            "string",
+            "dto",
+            "updateuserdto",
+            "promise",
+            "user"
+          ]
+        },
+        "sub:delete": {
+          "level": 4,
+          "title": "delete(id: string): Promise<void>",
+          "start": 140,
+          "end": 154,
+          "tags": [
+            "delete",
+            "id",
+            "string",
+            "promise",
+            "void"
+          ]
+        },
+        "依赖关系": {
+          "level": 2,
+          "title": "依赖关系",
+          "start": 155,
+          "end": 156,
+          "tags": [
+            "依赖关系"
+          ]
+        },
+        "内部依赖": {
+          "level": 3,
+          "title": "内部依赖",
+          "start": 157,
+          "end": 162,
+          "tags": [
+            "内部依赖"
+          ]
+        },
+        "相关文档": {
+          "level": 2,
+          "title": "相关文档",
+          "start": 163,
+          "end": 168,
+          "tags": [
+            "相关文档"
+          ]
+        }
+      }
+    }
+  },
+  "tagIndex": {
+    "测试框架": [
+      "test-framework"
+    ],
+    "项目概述": [
+      "test-framework",
+      "test-framework#项目概述"
+    ],
+    "TypeScript": [
+      "test-framework"
+    ],
+    "Express": [
+      "test-framework"
+    ],
+    "MongoDB": [
+      "test-framework"
+    ],
+    "用户认证": [
+      "test-framework"
+    ],
+    "用户管理": [
+      "test-framework",
+      "user"
+    ],
+    "分层架构": [
+      "test-framework"
+    ],
+    "Node.js": [
+      "test-framework"
+    ],
+    "技术栈": [
+      "test-framework#技术栈"
+    ],
+    "项目架构": [
+      "test-framework#项目架构"
+    ],
+    "架构设计理念": [
+      "test-framework#架构设计理念"
+    ],
+    "开发规范概要": [
+      "test-framework#开发规范概要"
+    ],
+    "代码规范": [
+      "test-framework#代码规范"
+    ],
+    "架构规范": [
+      "test-framework#架构规范"
+    ],
+    "规范": [
+      "test-framework#api:git"
+    ],
+    "git": [
+      "test-framework#api:git"
+    ],
+    "测试规范": [
+      "test-framework#测试规范"
+    ],
+    "文档规范": [
+      "test-framework#文档规范"
+    ],
+    "目录结构": [
+      "test-framework#目录结构"
+    ],
+    "src": [
+      "test-framework#api:src"
+    ],
+    "docs": [
+      "test-framework#api:docs"
+    ],
+    "tests": [
+      "test-framework#api:tests"
+    ],
+    "config": [
+      "test-framework#api:config"
+    ],
+    "快速开始": [
+      "test-framework#快速开始"
+    ],
+    "重要文档索引": [
+      "test-framework#重要文档索引"
+    ],
+    "贡献指南": [
+      "test-framework#贡献指南"
+    ],
+    "登录": [
+      "auth"
+    ],
+    "认证": [
+      "auth"
+    ],
+    "Token": [
+      "auth"
+    ],
+    "JWT": [
+      "auth"
+    ],
+    "用户验证": [
+      "auth"
+    ],
+    "密码": [
+      "auth"
+    ],
+    "注册": [
+      "auth"
+    ],
+    "登出": [
+      "auth"
+    ],
+    "身份验证": [
+      "auth"
+    ],
+    "Session": [
+      "auth"
+    ],
+    "文档导航": [
+      "auth#文档导航总270行"
+    ],
+    "总": [
+      "auth#文档导航总270行"
+    ],
+    "行": [
+      "auth#文档导航总270行"
+    ],
+    "模块概述": [
+      "auth#模块概述",
+      "user#模块概述"
+    ],
+    "模块架构": [
+      "auth#模块架构",
+      "user#模块架构"
+    ],
+    "设计模式": [
+      "auth#设计模式"
+    ],
+    "关键概念": [
+      "auth#关键概念"
+    ],
+    "文档": [
+      "auth#api",
+      "user#api"
+    ],
+    "api": [
+      "auth#api",
+      "user#api"
+    ],
+    "authservice": [
+      "auth#api:authservice"
+    ],
+    "login": [
+      "auth#sub:login"
+    ],
+    "dto": [
+      "auth#sub:login",
+      "auth#sub:register",
+      "user#sub:update"
+    ],
+    "logindto": [
+      "auth#sub:login"
+    ],
+    "promise": [
+      "auth#sub:login",
+      "auth#sub:register",
+      "auth#sub:refreshtoken",
+      "auth#sub:logout",
+      "user#sub:getbyid",
+      "user#sub:getbyemail",
+      "user#sub:update",
+      "user#sub:delete"
+    ],
+    "tokenpair": [
+      "auth#sub:login",
+      "auth#sub:refreshtoken"
+    ],
+    "register": [
+      "auth#sub:register"
+    ],
+    "registerdto": [
+      "auth#sub:register"
+    ],
+    "user": [
+      "auth#sub:register",
+      "user#sub:getbyid",
+      "user#sub:getbyemail",
+      "user#sub:update"
+    ],
+    "refreshtoken": [
+      "auth#sub:refreshtoken"
+    ],
+    "token": [
+      "auth#sub:refreshtoken"
+    ],
+    "string": [
+      "auth#sub:refreshtoken",
+      "auth#sub:logout",
+      "user#sub:getbyid",
+      "user#sub:getbyemail",
+      "user#sub:update",
+      "user#sub:delete"
+    ],
+    "logout": [
+      "auth#sub:logout"
+    ],
+    "userid": [
+      "auth#sub:logout"
+    ],
+    "void": [
+      "auth#sub:logout",
+      "user#sub:delete"
+    ],
+    "模块开发规范": [
+      "auth#模块开发规范"
+    ],
+    "错误处理": [
+      "auth#错误处理"
+    ],
+    "日志记录": [
+      "auth#日志记录"
+    ],
+    "数据验证": [
+      "auth#数据验证"
+    ],
+    "测试要求": [
+      "auth#测试要求"
+    ],
+    "依赖关系": [
+      "auth#依赖关系",
+      "user#依赖关系"
+    ],
+    "外部依赖": [
+      "auth#外部依赖"
+    ],
+    "内部依赖": [
+      "auth#内部依赖",
+      "user#内部依赖"
+    ],
+    "相关文档": [
+      "auth#相关文档",
+      "user#相关文档"
+    ],
+    "常见问题": [
+      "auth#常见问题"
+    ],
+    "用户": [
+      "user"
+    ],
+    "信息": [
+      "user"
+    ],
+    "查询": [
+      "user"
+    ],
+    "更新": [
+      "user"
+    ],
+    "删除": [
+      "user"
+    ],
+    "邮箱": [
+      "user"
+    ],
+    "个人资料": [
+      "user"
+    ],
+    "userservice": [
+      "user#api:userservice"
+    ],
+    "getbyid": [
+      "user#sub:getbyid"
+    ],
+    "id": [
+      "user#sub:getbyid",
+      "user#sub:update",
+      "user#sub:delete"
+    ],
+    "getbyemail": [
+      "user#sub:getbyemail"
+    ],
+    "email": [
+      "user#sub:getbyemail"
+    ],
+    "null": [
+      "user#sub:getbyemail"
+    ],
+    "update": [
+      "user#sub:update"
+    ],
+    "updateuserdto": [
+      "user#sub:update"
+    ],
+    "delete": [
+      "user#sub:delete"
+    ]
+  }
+}
