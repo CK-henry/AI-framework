@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 浅色主题 - 优雅的暖灰色调 */
+    --background: 40 20% 98%;
+    --foreground: 240 10% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 250 84% 54%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 10% 10%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 174 72% 46%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 250 84% 54%;
+    --radius: 0.75rem;
+
+    /* 自定义颜色 */
+    --glow: 250 84% 54%;
+    --surface: 0 0% 100%;
+    --surface-hover: 240 5% 97%;
+    --gradient-start: 250 84% 54%;
+    --gradient-end: 280 84% 60%;
+  }
+
+  .dark {
+    /* 深色主题 - 深邃的蓝紫色调 */
+    --background: 240 20% 6%;
+    --foreground: 0 0% 95%;
+    --card: 240 18% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 18% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 250 84% 64%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 14% 16%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 14% 16%;
+    --muted-foreground: 240 5% 60%;
+    --accent: 174 72% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 14% 18%;
+    --input: 240 14% 18%;
+    --ring: 250 84% 64%;
+
+    /* 自定义颜色 */
+    --glow: 250 84% 64%;
+    --surface: 240 18% 10%;
+    --surface-hover: 240 16% 14%;
+    --gradient-start: 250 84% 64%;
+    --gradient-end: 280 84% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  /* 选中文本样式 */
+  ::selection {
+    @apply bg-primary/30 text-foreground;
+  }
+}
+
+@layer components {
+  /* 玻璃态卡片 */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl;
+    @apply bg-card/80 backdrop-blur-xl;
+    @apply border border-border/50;
+    @apply shadow-lg shadow-black/5 dark:shadow-black/20;
+    @apply transition-all duration-300;
+  }
+
+  .glass-card:hover {
+    @apply border-primary/30 shadow-xl;
+    @apply shadow-primary/5 dark:shadow-primary/10;
+  }
+
+  /* 发光效果 */
+  .glow {
+    @apply relative;
+  }
+
+  .glow::before {
+    content: '';
+    @apply absolute -inset-1 rounded-2xl opacity-0 blur-xl transition-opacity duration-500;
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+  }
+
+  .glow:hover::before {
+    @apply opacity-20;
+  }
+
+  /* 渐变文字 */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+  }
+
+  /* 渐变边框 */
+  .gradient-border {
+    @apply relative rounded-2xl;
+  }
+
+  .gradient-border::before {
+    content: '';
+    @apply absolute -inset-px rounded-2xl -z-10;
+    background: linear-gradient(135deg, hsl(var(--gradient-start)) 0%, hsl(var(--gradient-end)) 100%);
+  }
+
+  /* 主按钮 */
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center;
+    @apply px-5 py-2.5 rounded-xl font-semibold text-sm;
+    @apply bg-gradient-to-r from-primary to-[hsl(280,84%,60%)] dark:to-[hsl(280,84%,70%)];
+    @apply text-primary-foreground;
+    @apply shadow-lg shadow-primary/25;
+    @apply transition-all duration-300;
+    @apply hover:shadow-xl hover:shadow-primary/30 hover:scale-[1.02];
+    @apply active:scale-[0.98];
+  }
+
+  /* 次要按钮 */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center;
+    @apply px-5 py-2.5 rounded-xl font-semibold text-sm;
+    @apply bg-secondary text-secondary-foreground;
+    @apply border border-border;
+    @apply transition-all duration-300;
+    @apply hover:bg-secondary/80 hover:border-primary/30;
+  }
+
+  /* 幽灵按钮 */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center;
+    @apply px-4 py-2 rounded-xl font-medium text-sm;
+    @apply text-muted-foreground;
+    @apply transition-all duration-300;
+    @apply hover:bg-muted hover:text-foreground;
+  }
+
+  /* 图标按钮 */
+  .btn-icon {
+    @apply inline-flex items-center justify-center;
+    @apply w-10 h-10 rounded-xl;
+    @apply text-muted-foreground;
+    @apply transition-all duration-300;
+    @apply hover:bg-muted hover:text-foreground;
+  }
+
+  /* 标签 */
+  .tag {
+    @apply inline-flex items-center;
+    @apply px-3 py-1 rounded-full;
+    @apply text-xs font-semibold;
+    @apply bg-primary/10 text-primary;
+    @apply border border-primary/20;
+    @apply transition-all duration-200;
+    @apply hover:bg-primary/20 hover:border-primary/30;
+  }
+
+  .tag-accent {
+    @apply bg-accent/10 text-accent border-accent/20;
+    @apply hover:bg-accent/20 hover:border-accent/30;
+  }
+
+  /* 输入框 */
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl;
+    @apply bg-secondary/50 border border-border;
+    @apply text-foreground placeholder:text-muted-foreground;
+    @apply transition-all duration-300;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary;
+    @apply hover:border-primary/30;
+  }
+
+  /* 模块卡片 */
+  .module-card {
+    @apply glass-card p-6;
+  }
+
+  /* 统计卡片 */
+  .stat-card {
+    @apply glass-card p-6;
+    @apply hover:scale-[1.02] cursor-default;
+  }
+
+  /* 导航项 */
+  .nav-item {
+    @apply flex items-center gap-3;
+    @apply px-4 py-3 rounded-xl;
+    @apply text-sm font-medium text-muted-foreground;
+    @apply transition-all duration-300;
+    @apply hover:bg-muted hover:text-foreground;
+  }
+
+  .nav-item.active {
+    @apply bg-primary text-primary-foreground;
+    @apply shadow-lg shadow-primary/25;
+  }
+
+  /* 代码块 */
+  .code-block {
+    @apply p-4 rounded-xl;
+    @apply bg-[#1e1e2e] text-[#cdd6f4];
+    @apply font-mono text-base leading-relaxed;
+    @apply overflow-x-auto;
+    @apply border border-border/50;
+  }
+
+  /* 搜索高亮 */
+  .search-highlight {
+    @apply bg-accent/30 text-accent px-1 rounded;
+    @apply font-semibold;
+  }
+
+  /* 分隔线 */
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+
+  /* 徽章 */
+  .badge {
+    @apply inline-flex items-center justify-center;
+    @apply px-2.5 py-0.5 rounded-full;
+    @apply text-xs font-bold;
+    @apply bg-primary text-primary-foreground;
+  }
+
+  .badge-outline {
+    @apply bg-transparent border-2 border-primary text-primary;
+  }
+
+  /* 动画入场 */
+  .animate-in {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  .animate-in-delay-1 { animation-delay: 0.1s; }
+  .animate-in-delay-2 { animation-delay: 0.2s; }
+  .animate-in-delay-3 { animation-delay: 0.3s; }
+  .animate-in-delay-4 { animation-delay: 0.4s; }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 脉冲动画 */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+    }
+  }
+
+  /* 浮动动画 */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* 闪烁动画 */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--primary) / 0.1) 50%,
+      transparent 100%
+    );
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+  @apply hover:bg-muted-foreground/30;
+}
+
+/* 代码字体 */
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Markdown 代码块样式 */
+.prose pre {
+  @apply bg-[#1e1e2e] text-[#cdd6f4] rounded-xl p-5 my-4;
+  @apply text-base leading-relaxed;
+  @apply border border-border/30;
+  @apply overflow-x-auto;
+}
+
+.prose pre code {
+  @apply bg-transparent text-inherit p-0;
+  @apply text-base leading-relaxed;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+.prose code {
+  @apply text-primary bg-primary/10 px-1.5 py-0.5 rounded-md;
+  @apply text-sm font-medium;
+}
+
+.prose code::before,
+.prose code::after {
+  content: none;
+}
+
+/* 代码高亮颜色 - Catppuccin Mocha 风格 */
+.prose pre .keyword { color: #cba6f7; }
+.prose pre .string { color: #a6e3a1; }
+.prose pre .number { color: #fab387; }
+.prose pre .comment { color: #6c7086; font-style: italic; }
+.prose pre .function { color: #89b4fa; }
+.prose pre .operator { color: #89dceb; }
+.prose pre .variable { color: #f5e0dc; }
+
+/* 响应式工具 */
+@media (max-width: 768px) {
+  .glass-card {
+    @apply rounded-xl;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  .glass-card {
+    @apply shadow-none border;
+  }
+}
