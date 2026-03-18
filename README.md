@@ -184,16 +184,16 @@ Through semantic indexing, AI can:
 ### Quick Navigation
 
 **Learn about the system**
-- See: [Project Documentation Standard v2](项目文档规范标准v2.md) - Technical specs and indexing system
+- See: [Project Documentation Standard v2](Project-Documentation-Standard-v2-EN.md) - Technical specs and indexing system
 
 **Start a new project**
-- See: [Documentation Setup Guide](AI协作文档建系指南.md) - Build from scratch
+- See: [Documentation Setup Guide](AI-Collaboration-Setup-Guide-EN.md) - Build from scratch
 
 **Migrate existing project**
-- See: [Migration Guide](AI协作旧项目迁移指南.md) - Gradual migration
+- See: [Migration Guide](AI-Collaboration-Migration-Guide-EN.md) - Gradual migration
 
 **AI developer guide**
-- See: [AI Development Guide v2](AI开发指南v2.md) - How to use semantic indexing
+- See: [AI Development Guide v2](AI-Development-Guide-v2-EN.md) - How to use semantic indexing
 
 **View complete example**
 - Check: [example-project/](example-project/) - Full implementation example
@@ -202,15 +202,20 @@ Through semantic indexing, AI can:
 
 ```
 AI-Collaboration-Docs/
-├── 项目文档规范标准v2.md      # Technical specs (SKILL.md + indexing)
-├── AI开发指南v2.md            # AI user manual
-├── AI协作文档建系指南.md       # New project setup guide
-├── AI协作旧项目迁移指南.md     # Migration guide
-└── example-project/           # Example project
-    ├── SKILL.md              # Example documentation
-    ├── SKILL.index.json      # Generated index
-    ├── build-index-auto.js   # Index generator
-    └── .GUI/                 # Visualization UI (optional)
+├── 项目文档规范标准v2.md                    # Technical specs (Chinese)
+├── Project-Documentation-Standard-v2-EN.md  # Technical specs (English)
+├── AI开发指南v2.md                          # AI user manual (Chinese)
+├── AI-Development-Guide-v2-EN.md            # AI user manual (English)
+├── AI协作文档建系指南.md                     # Setup guide (Chinese)
+├── AI-Collaboration-Setup-Guide-EN.md       # Setup guide (English)
+├── AI协作旧项目迁移指南.md                   # Migration guide (Chinese)
+├── AI-Collaboration-Migration-Guide-EN.md   # Migration guide (English)
+└── example-project/                         # Example project
+    ├── SKILL.md                            # Example documentation
+    ├── SKILL.index.json                    # Generated index
+    ├── build-index-auto.js                 # Index generator
+    └── .GUI/                               # Visualization UI (optional)
+        └── README-EN.md                    # GUI documentation (English)
 ```
 
 ### Quick Start
