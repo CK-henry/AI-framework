@@ -1,8 +1,17 @@
-# AI 协作开发文档体系
+# AI 协作开发文档体系 / AI Collaboration Documentation System
 
 > 让 AI 深度参与大型项目开发的工程化解决方案
+>
+> Engineering solution for deep AI participation in large-scale projects
 
-## 这是什么
+[中文](#中文) | [English](#english)
+
+---
+
+<a name="中文"></a>
+## 中文版
+
+### 这是什么
 
 一套专为 AI 辅助开发工具（Claude Code、GitHub Copilot、Cursor 等）设计的**项目文档规范和工具集**。
 
@@ -140,6 +149,159 @@ tags: [标签1, 标签2, 标签3]
 
 欢迎提交 Issue 和 PR，帮助改进这套体系。
 
+**联系方式**：
+- 微信：`dorado_henry`
+- GitHub Issues: [提交问题](../../issues)
+
 ## 许可证
+
+MIT License
+
+---
+
+<a name="english"></a>
+## English Version
+
+### What is this
+
+A **documentation specification and toolset** designed for AI-assisted development tools (Claude Code, GitHub Copilot, Cursor, etc.).
+
+Through semantic indexing, AI can:
+- Precisely locate code (2 steps, 87% token reduction)
+- Understand project structure and module boundaries
+- Follow development standards, reduce errors
+- Continuously participate in large project development
+
+### Core Value
+
+| Problem | Solution |
+|---------|----------|
+| AI gets lost in large projects | Semantic indexing + hierarchical documentation |
+| High token consumption | From 15,000 to 2,000 characters |
+| Documentation-code mismatch | Auto-generated index + sync mechanism |
+| Lack of collaboration standards | Complete setup and development guides |
+
+### Quick Navigation
+
+**Learn about the system**
+- See: [Project Documentation Standard v2](项目文档规范标准v2.md) - Technical specs and indexing system
+
+**Start a new project**
+- See: [Documentation Setup Guide](AI协作文档建系指南.md) - Build from scratch
+
+**Migrate existing project**
+- See: [Migration Guide](AI协作旧项目迁移指南.md) - Gradual migration
+
+**AI developer guide**
+- See: [AI Development Guide v2](AI开发指南v2.md) - How to use semantic indexing
+
+**View complete example**
+- Check: [example-project/](example-project/) - Full implementation example
+
+### Project Structure
+
+```
+AI-Collaboration-Docs/
+├── 项目文档规范标准v2.md      # Technical specs (SKILL.md + indexing)
+├── AI开发指南v2.md            # AI user manual
+├── AI协作文档建系指南.md       # New project setup guide
+├── AI协作旧项目迁移指南.md     # Migration guide
+└── example-project/           # Example project
+    ├── SKILL.md              # Example documentation
+    ├── SKILL.index.json      # Generated index
+    ├── build-index-auto.js   # Index generator
+    └── .GUI/                 # Visualization UI (optional)
+```
+
+### Quick Start
+
+#### 1. Use in your project
+
+```bash
+# Copy core files to your project
+cp example-project/build-index-auto.js your-project/
+
+# Create root documentation (refer to template)
+# Edit your-project/SKILL.md
+
+# Generate index
+cd your-project
+node build-index-auto.js
+
+# Now AI can quickly locate code via SKILL.index.json
+```
+
+#### 2. View example project
+
+```bash
+# Enter example project
+cd example-project
+
+# Generate index
+node build-index-auto.js
+
+# (Optional) Start visualization UI
+# Windows: start-gui.bat
+# Mac/Linux: ./start-gui.sh
+```
+
+### Core Features
+
+#### Semantic Indexing System
+
+Precise location via `SKILL.index.json`:
+
+```
+User query → Read index → Tag matching → Locate file+line → Direct read
+```
+
+**Efficiency comparison**:
+- Traditional search: 5+ steps, 15,938 characters
+- **Semantic indexing: 2 steps, ~2,000 characters (87% savings)**
+
+#### SKILL.md Documentation Format
+
+```markdown
+---
+name: module-name
+tags: [tag1, tag2, tag3]
+---
+
+# Module Name
+
+## Overview
+...
+
+## API Documentation
+...
+```
+
+Auto-extract titles, generate index, zero maintenance cost.
+
+### Use Cases
+
+- ✅ Medium to large projects with multiple modules
+- ✅ Long-term AI participation in development
+- ✅ Team collaboration requiring unified standards
+- ✅ Documentation-code synchronization issues
+- ✅ AI frequently gets lost in projects
+
+### Version History
+
+#### v2.0.0 (2026-01-29)
+- Semantic indexing system, 80%+ token reduction
+- Auto-extract sections, zero maintenance
+- Language-agnostic solution
+- Added setup and migration guides
+
+### Contributing
+
+Issues and PRs are welcome to help improve this system.
+
+**Contact**:
+- WeChat: `dorado_henry`
+- GitHub Issues: [Submit Issue](../../issues)
+
+### License
 
 MIT License
