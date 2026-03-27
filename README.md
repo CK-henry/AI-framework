@@ -13,6 +13,8 @@
 
 ### 这是什么
 
+此仓库不更新了 清查看最新 工作流 https://github.com/henrydiaosi/dorado
+
 一套专为 AI 辅助开发工具（Claude Code、GitHub Copilot、Cursor 等）设计的**项目文档规范和工具集**。
 
 通过语义索引系统，让 AI 能够：
